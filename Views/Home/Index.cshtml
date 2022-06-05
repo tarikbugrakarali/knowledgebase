@@ -1,0 +1,789 @@
+﻿@model ArticlesViewModel
+ 
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- MAIN SECTION -->
+<div class="container featured-area-default padding-30">
+    <div class="row"v>
+        <div class="col-md-8 padding-20">
+
+            <!-- LATEST VIDEO TUTORIAL AREA -->
+            <div class="row margin-bottom-30">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="featured-box">
+                            <div class="fb-heading" style="font-family:AnkaraSubHead-Bold;">
+                                Tanıtım Videosu
+                                <div class="fb-sub-heading" style="font-family:AnkaraSubHead-Light;">
+                                    <b style="font-family:AnkaraSubHead-Light;">Burada yeni misiniz?</b> Videoyu izleyerek başlayın.
+                                    <br>
+                                </div>
+                            </div>
+                            <hr class="style-three">
+                            <div class="fb-content">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/YWRK2iD6cdU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END LATEST VIDEO TUTORIAL AREA -->
+            <!-- ARTICLE CATEGORIES SECTION -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fb-heading">
+                       Makale Kategorileri
+                    </div>
+                    <hr class="style-three">
+                    <div class="row">
+
+
+                        @*<div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Basın Yayın ve Halkla İlişkiler Dairesi Başkanlığı
+                    <span class="cat-count">(10)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+
+                    @foreach (var Article in Model.articles)
+                    {
+
+                        @if (@Article.Department.Equals("Basın Yayın ve Halkla İlişkiler Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Bilgi İşlem Dairesi Başkanlığı
+                    <span class="cat-count">(6)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (Article.Department.Equals("Bilgi İşlem Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i>Çevre Koruma ve Kontrol Dairesi Başkanlığı
+                    <span class="cat-count">(5)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Çevre Koruma ve Kontrol Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+
+
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Deprem Risk Yönetimi ve Kentsel İyileştirme Dairesi Başkanlığı
+                    <span class="cat-count">(45)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Deprem Risk Yönetimi ve Kentsel İyileştirme Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Destek Hizmetleri Dairesi Başkanlığı
+                    <span class="cat-count">(12)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Destek Hizmetleri Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Emlak ve İstimlak Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Emlak ve İstimlak Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Fen İşleri Dairesi Başkanlığı
+                    <span class="cat-count">(10)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+
+                    @foreach (var Article in Model.articles)
+                    {
+
+                        @if (@Article.Department.Equals("Fen İşleri Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Hukuk Müşavirliği
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Hukuk Müşavirliği"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> İmar ve Şehircilik Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("İmar ve Şehircilik Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> İnsan Kaynakları ve Eğitim Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("İnsan Kaynakları ve Eğitim Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> İşletme ve İştirakler Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("İşletme ve İştirakler Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Kent Estetiği Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Kent Estetiği Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Kırsal Hizmetler Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Kırsal Hizmetler Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Kültür ve Sosyal İşler Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Kültür ve Sosyal İşler Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Kültür ve Tabiat Varlıkları Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Kültür ve Tabiat Varlıkları Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Makine İkmal Bakım ve Onarım Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Makine İkmal Bakım ve Onarım Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Mali Hizmetler Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Mali Hizmetler Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> İtfaiye Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("İtfaiye Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Mezarlıklar Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Mezarlıklar Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Özel Projeler ve Dönüşüm Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Özel Projeler ve Dönüşüm Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Sağlık İşleri Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Sağlık İşleri Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Sosyal Hizmetler Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Sosyal Hizmetler Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Teftiş Kurulu Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Teftiş Kurulu Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Ulaşım Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Ulaşım Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Yapı Kontrol Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Yapı Kontrol Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Yazı İşleri ve Kararlar Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+
+                        @if (@Article.Department.Equals("Yazı İşleri ve Kararlar Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6 margin-bottom-20">
+            <div class="fat-heading-abb">
+                <a href="single-category.html">
+                    <i class="fa fa-folder"></i> Zabıta Dairesi Başkanlığı
+                    <span class="cat-count">(60)</span>
+                </a>
+            </div>
+            <div class="fat-content-small padding-left-30">
+                <ul>
+                    @foreach (var Article in Model.articles)
+                    {
+
+                        @if (@Article.Department.Equals("Zabıta Dairesi Başkanlığı"))
+                        {
+                            <li>
+                                <a href="/uploads/@Article.FileName">
+                                    <i class="fa fa-file-text-o"></i> @Article.FileName
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>*@
+
+                        @foreach (var Departman in Model.departments)
+                        {
+
+                            <div class="col-md-6 margin-bottom-20">
+                                <div class="fat-heading-abb">
+                                    <a asp-action="DepartmentDetail" asp-controller="Home" asp-route-id="@Departman">
+                                        <i class="fa fa-folder"></i> @Departman
+                                        
+                                    </a>
+                                </div>
+                                <div class="fat-content-small padding-left-30">
+                                    <ul>
+                                        @foreach (var Article in Model.articles.Take(5))
+                                        {
+
+                                            @if (@Article.Department.Equals(@Departman))
+                                            {
+                                                <li>
+                                                    <a href="/uploads/@Article.FileName">
+                                                        <i class="fa fa-file-text-o"></i> @Article.FileName
+                                                    </a>
+                                                </li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+
+                        <a href="https://localhost:44367/Home/KnowledgeBase" class="btn btn-primary pull-right">
+                            <i class="fa fa-align-justify"></i> Hepsini Görüntüle
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END ARTICLES CATEOGIRES SECTION -->
+       
+    </div>
+</div>
+<!-- END MAIN SECTION -->
+
+<
+<!-- LOADING MAIN JAVASCRIPT -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src='https://cdn.rawgit.com/VPenkov/okayNav/master/app/js/jquery.okayNav.js'></script>

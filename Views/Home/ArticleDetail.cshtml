@@ -1,0 +1,36 @@
+﻿@model Text
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-md-8 padding-20">
+    <div class="panel panel-default">
+        <div class="article-heading-abb">
+            
+                <i class="fa fa-pencil-square-o"></i> @Model.Header
+           
+        </div>
+        <div class="article-info">
+            <div class="art-date">
+                <a href="#">
+                    <i class="fa fa-calendar-o"></i> @Model.Date
+                </a>
+            </div>
+            <div class="art-category">
+                <a href="#">
+                    <i class="fa fa-folder"></i> @Model.Tag
+                </a>
+            </div>
+            <div class="art-comments">
+                <a href="#">
+                    <i class="fa fa-comments-o"></i> @Model.Department
+                </a>
+            </div>
+        </div>
+        <div class="article-content">
+            <p class="block-with-text">
+                @Model.Article
+            </p>
+        </div>
+
+    </div>
+</div>

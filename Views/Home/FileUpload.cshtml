@@ -1,0 +1,57 @@
+﻿@model Article
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<form class="col-md-8 padding-20" enctype="multipart/form-data" method="post" >
+    <div class="form-group">
+        <label>Makale Açıklaması:</label>
+        <input type="text" asp-for="FileName" class="form-control" id="explaination"  placeholder="Açıklama">
+        
+    </div>
+    <div class="form-group">
+        <label>Etiket:</label>
+        <input type="text" asp-for="Tag" class="form-control" id="tag" placeholder="Etiket">
+    </div>
+
+    <div class="form-group">
+        <label>Departman:</label>
+        <select class="form-select" asp-for="Department" aria-label="Departman Seçiniz">
+            <option selected>Departman Seçiniz</option>
+            <option value="Basın Yayın ve Halkla İlişkiler Dairesi Başkanlığı">Basın Yayın ve Halkla İlişkiler Dairesi Başkanlığı</option>
+            <option value="Bilgi İşlem Dairesi Başkanlığı">Bilgi İşlem Dairesi Başkanlığı</option>
+            <option value="Çevre Koruma ve Kontrol Dairesi Başkanlığı">Çevre Koruma ve Kontrol Dairesi Başkanlığı</option>
+            <option value="Deprem Risk Yönetimi ve Kentsel İyileştirme Dairesi Başkanlığı">Deprem Risk Yönetimi ve Kentsel İyileştirme Dairesi Başkanlığı</option>
+            <option value="Destek Hizmetleri Dairesi Başkanlığı">Destek Hizmetleri Dairesi Başkanlığı</option>
+            <option value="Emlak ve İstimlak Dairesi Başkanlığı">Emlak ve İstimlak Dairesi Başkanlığı</option>
+            <option value="Fen İşleri Dairesi Başkanlığı">Fen İşleri Dairesi Başkanlığı</option>
+            <option value="Hukuk Müşavirliği">Hukuk Müşavirliği</option>
+            <option value="İmar ve Şehircilik Dairesi Başkanlığı">İmar ve Şehircilik Dairesi Başkanlığı</option>
+            <option value="İnsan Kaynakları ve Eğitim Dairesi Başkanlığı">İnsan Kaynakları ve Eğitim Dairesi Başkanlığı</option>
+            <option value="İşletme ve İştirakler Dairesi Başkanlığı">İşletme ve İştirakler Dairesi Başkanlığı</option>
+            <option value="Kent Estetiği Dairesi Başkanlığı">Kent Estetiği Dairesi Başkanlığı</option>
+            <option value="Kırsal Hizmetler Dairesi Başkanlığı">Kırsal Hizmetler Dairesi Başkanlığı</option>
+            <option value="Kültür ve Sosyal İşler Dairesi Başkanlığı">Kültür ve Sosyal İşler Dairesi Başkanlığı</option>
+            <option value="Kültür ve Tabiat Varlıkları Dairesi Başkanlığı">Kültür ve Tabiat Varlıkları Dairesi Başkanlığı</option>
+            <option value="Makine İkmal Bakım ve Onarım Dairesi Başkanlığı">Makine İkmal Bakım ve Onarım Dairesi Başkanlığı</option>
+            <option value="Mali Hizmetler Dairesi Başkanlığı">Mali Hizmetler Dairesi Başkanlığı</option>
+            <option value="İtfaiye Dairesi Başkanlığı">İtfaiye Dairesi Başkanlığı</option>
+            <option value="Mezarlıklar Dairesi Başkanlığı">Mezarlıklar Dairesi Başkanlığı</option>
+            <option value="Özel Projeler ve Dönüşüm Dairesi Başkanlığı">Özel Projeler ve Dönüşüm Dairesi Başkanlığı</option>
+            <option value="Sağlık İşleri Dairesi Başkanlığı">Sağlık İşleri Dairesi Başkanlığı</option>
+            <option value="Sosyal Hizmetler Dairesi Başkanlığı">Sosyal Hizmetler Dairesi Başkanlığı</option>
+            <option value="Teftiş Kurulu Başkanlığı">Teftiş Kurulu Başkanlığı</option>
+            <option value="Ulaşım Dairesi Başkanlığı">Ulaşım Dairesi Başkanlığı</option>
+            <option value="Yapı Kontrol Dairesi Başkanlığı">Yapı Kontrol Dairesi Başkanlığı</option>
+            <option value="Yazı İşleri ve Kararlar Dairesi Başkanlığı">Yazı İşleri ve Kararlar Dairesi Başkanlığı</option>
+            <option value="Zabıta Dairesi Başkanlığı">Zabıta Dairesi Başkanlığı</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="FileUpload">Yüklenecek Dosyayı Seçiniz</label>
+        <input type="file" class="form-control-file" asp-for="file" id="FileUpload">
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Yükle</button>
+</form>

@@ -1,0 +1,41 @@
+﻿@model LoginViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="col-md-8 padding-20">
+    <br />
+    
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col">Kullanıcı Adı</th>
+                <th scope="col">Şifre</th>
+                <th scope="col">Yetki Türü</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Login in Model.users)
+            {
+            <tr>
+                <td>@Login.Username  </td>
+                <td>@Login.Password  </td>
+                @if ((Boolean)@Login.Admin && @Login.Admin != null )
+                {
+                    <td> Admin  </td>
+                }
+
+                else
+                {
+                <td> Kullanıcı  </td>
+                }
+
+               
+            </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div> 

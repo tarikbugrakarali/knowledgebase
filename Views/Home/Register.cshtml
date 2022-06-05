@@ -1,0 +1,107 @@
+﻿@model Login
+
+@{
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8" />
+
+    <title>Gomac Knowledgebase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- LOADING STYLESHEETS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/login.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row main-content bg-success text-center">
+            <div class="col-md-4 text-center company__info">
+                <span class="company__logo">
+                    <img src="/images/abb.jpg" height="74" width="52" alt="logo">
+                </span>
+                <h4 class="company_title">Ankara Büyükşehir Belediyesi</h4>
+            </div>
+            <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                <div class="container-fluid">
+                    <div class="row">
+                        <h2>Kayıt Ol</h2>
+                    </div>
+                    <div class="row">
+                        <form asp-controller="Home" asp-action="Register" class="form-group" method="post" onsubmit ="checkPass()">
+                            <div class="row">
+                                <input type="text" asp-for="Username" id="username" class="form__input" placeholder="Kullanıcı Adı">
+                            </div>
+                            <div class="row">
+                                <!-- <span class="fa fa-lock"></span> -->
+                                <input type="password" asp-for="Password" id="password" class="form__input" placeholder="Şifre">
+                            </div>
+
+                            <div class="row">
+                                <!-- <span class="fa fa-lock"></span> -->
+                                <input type="password" name="password2" id="password2" class="form__input" placeholder="Şifre Tekrar">
+                            </div>
+
+                            <div class="row">
+                                <input class="btn" type="submit"  value="Kaydol">
+                            </div>
+
+                           
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkPass(){
+            var name = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var password2 = document.getElementById('password2').value;
+            var result = password.localeCompare(password2);
+
+            if (!name) {
+                alert('Ad hanesi boş bırakılamaz!');
+                document.getElementById('username').value = "";
+            }
+
+            else if (!password) {
+                alert('Şifre hanesi boş bırakılamaz!');
+                document.getElementById('password').value = "";
+            }
+
+            else if (!password2) {
+                alert('Şifreyi tekrar giriniz!');
+                document.getElementById('password2').value = "";
+                document.getElementById('username').value = name;
+                document.getElementById('username').value = password;
+            }
+            else {
+                if (result) {
+                    alert('Girdiğiniz şifreler aynı değil!');
+                    document.getElementById('password').value = "";
+                }
+
+                else {
+                    var r = confirm('Kayıt işleminiz tamamlandı!');
+
+                    if (r == true) {
+
+                        window.open('https://localhost:44367/');
+                    } else {
+                        
+                    }
+                   
+                }
+            }
+
+            
+
+        }
+    </script>
+
+</body>

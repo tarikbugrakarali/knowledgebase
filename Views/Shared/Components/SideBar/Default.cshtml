@@ -1,0 +1,58 @@
+﻿
+@model ViewModel
+
+<div class="col-md-12">
+    <div class="fb-heading-small">
+        Son Yüklenen Makaleler
+    </div>
+    <hr class="style-three">
+    <div class="fat-content-small padding-left-10">
+        <ul>
+            @foreach (var Article in Model.Articles.Take(5))
+            {
+
+
+                <li>
+                    <a href="/uploads/@Article.FileName">
+                        <i class="fa fa-file-text-o"></i> @Article.FileName
+                    </a>
+                </li>
+
+            }
+        </ul>
+    </div>
+
+    <div class="fb-heading-small">
+        Son Yüklenen Yazılar
+    </div>
+    <hr class="style-three">
+    <div class="fat-content-small padding-left-10">
+        <ul>
+            @foreach (var Text in Model.Texts.Take(5))
+            {
+
+
+                <li>
+                    <a asp-action="ArticleDetail" asp-controller="Home" asp-route-id="@Text.Id"> <i class="fa fa-file-text-o"></i>@Text.Header</a>
+                </li>
+
+            }
+        </ul>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="fb-heading-small">
+        Popular Tags
+    </div>
+    <hr class="style-three">
+    <div class="fat-content-tags padding-left-10">
+        @foreach (var Text in Model.Articles .Take(20))
+        {
+        
+                <a asp-action="Result" asp-controller="Home"asp-route-findThis="@Text.Tag" class="btn btn-default btn-o btn-sm">@Text.Tag </a>
+
+        }
+
+    </div>
+</div> 

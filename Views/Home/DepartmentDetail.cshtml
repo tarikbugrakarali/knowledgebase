@@ -1,0 +1,42 @@
+﻿@model ArticlesViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-md-8 padding-20">
+    <br />
+    <h2>@ViewBag.part </h2>
+   
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col">Dosya Adı</th>
+                <th scope="col">Etiket</th>
+        
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Article in Model.articles)
+            {
+                <tr>
+                    <td>
+
+                        <a href="/uploads/@Article.FileName">
+                            <i class="fa fa-file-text-o"></i> @Article.FileName
+                        </a>
+
+                    </td>
+
+                    
+                    <td># @Article.Tag </td>
+                   
+
+
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div> 

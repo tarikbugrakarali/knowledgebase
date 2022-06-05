@@ -1,0 +1,265 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gomac Knowledgebase</title>
+    <!-- LOADING STYLESHEETS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/glow.css"  rel="stylesheet">
+
+    <style>
+        .div-1 {
+            background-color: #EBEBEB;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container-fluid featured-area-white-border" style="font-family:AnkaraDisplay-Heavy;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="login-box border-right-1">
+                        <a href="https://localhost:44367/Home/Login">
+                            <i class="fa fa-key"></i> Giriş Yap
+                        </a>
+                    </div>
+                    <div class="login-box border-left-1 border-right-1">
+                        <a href="https://localhost:44367/Home/Register">
+                            <i class="fa fa-pencil"></i> Kayıt Ol
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOGO -->
+    <div class="container" style="font-family: AnkaraDisplay-Heavy;">
+        <div class="row">
+
+            <div class="d-flex float-none float-md-start">
+                <div class="logo" align="center">
+                    <img src="/images/logo-white.svg"  height="200" width="100" alt="logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <!-- END LOGO-->
+    <div class="wrapper">
+        @*<div class="main-div main-div1">
+                <h1>Enjoy</h1>
+            </div>*@
+        <div class="main-div main-div2">
+            <h1>Ankara Büyükşehir Belediyesi Kütüphanesi</h1>
+        </div>
+        @*<div class="main-div main-div3">
+                <h1>Moment</h1>
+            </div>*@
+    </div>
+    <!-- TOP NAVIGATION -->
+    <div class="container-fluid" style="font-family: AnkaraDisplay-Heavy;">
+        <div class="navigation">
+            <div class="row">
+                <ul class="topnav">
+                    <li></li>
+                    <li>
+
+                        <a href="https://localhost:44367/Home">
+                            <i class="fa fa-home  "></i> Ana Sayfa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://localhost:44367/Home/KnowledgeBase">
+                            <i class="fa fa-archive "></i> Makaleler
+                        </a>
+                    </li>
+                    <li>
+
+                        <a href="https://localhost:44367/Home/Articles">
+                            <i class="fa fa-file-archive-o  "></i> Yazılar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://localhost:44367/Home/SSS">
+                            <i class="fa fa-question "></i> SSS
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END TOP NAVIGATION -->
+    <!-- SEARCH FIELD AREA -->
+    <div class="searchfield bg-hed-six" style="font-family: AnkaraDisplay-Heavy;">
+        <div class="container" style="padding-top: 20px; padding-bottom: 20px;">
+            <div class="row text-center margin-bottom-20">
+                <marquee direction=right><h2 class="white" style="font-family: AnkaraDisplay-Heavy;"> Ankara Büyükşehir Belediyesi Kütüphanesi Sorun Çözüm Merkezi</h2></marquee>
+            </div>
+            <br>
+            <div class="row search-row">
+                <form enctype="multipart/form-data" method="GET" asp-action="Result" asp-controller="Home">
+                    <input type="text" class="search" name="findThis" placeholder="Hangi konuda yardımcı olabiliriz?">
+
+                    <button type="submit" class="buttonsearch btn btn-info btn-lg">Ara</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- END SEARCH FIELD AREA -->
+    <!-- SIDEBAR STUFF -->
+    <div class="col-md-4 padding-20" style="font-family: AnkaraDisplay-Heavy;">
+        <div class="row margin-bottom-30">
+            <div class="col-md-12 ">
+                <div class="support-container">
+                    <h2 class="support-heading">Daha Fazla Desteğe mi İhtiyacınız Var?</h2>
+                    Eğer sorununuza kütüphaneden çözüm bulamadıysanız
+                    <a href="https://www.ankara.bel.tr/kurumsal/ankara-buyuksehir-belediyesi-birim-yonetmelikleri">buradan</a> yardım için ulaşabilirsiniz.
+                </div>
+            </div>
+        </div>
+
+        <div class="row margin-top-20">
+            @await Component.InvokeAsync("SideBar")
+        </div>
+
+
+
+        <!-- POPULAR TAGS (SHOW MAX 20 TAGS) -->
+        @*<div class="row margin-top-20">
+                <div class="col-md-12">
+                    <div class="fb-heading-small">
+                        Popular Tags
+                    </div>
+                    <hr class="style-three">
+                    <div class="fat-content-tags padding-left-10">
+                        <a href="#" class="btn btn-default btn-o btn-sm">password</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">settings</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">sign up</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">currency</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">payment</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">user</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">database</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">storage</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">export</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">email</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">import</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">campaign</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">edit</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">orders</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">help</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">billing</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">user</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">configure</a>
+                        <a href="#" class="btn btn-default btn-o btn-sm">customer</a>
+                    </div>
+                </div>
+            </div>*@
+        <!-- END POPULAR TAGS (SHOW MAX 20 TAGS) -->
+    </div>
+    <!-- END SIDEBAR STUFF -->
+
+    <div class="container" style="font-family: AnkaraDisplay-Heavy;">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container-fluid footer marg30" style="font-family: AnkaraDisplay-Heavy;">
+        <div class="container">
+            <!-- FOOTER COLUMN ONE -->
+            <div class="col-xs-12 col-sm-4 col-md-4 margin-top-20">
+                <div class="panel-transparent">
+                    <div class="footer-heading">Nasıl Çalışır?</div>
+                    <div class="footer-body">
+                        <p>
+                            Sorun yaşadığınız konuyu arama çubuğuna yazarak veya departmanınızın makaleler bölümünde arayarak çözüm bulabilirsiniz.
+                        </p>
+                        <p>
+                            Belge yükleme işlemleri sadece yetkililer tarafından yapılmaktadır.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END FOOTER COLUMN ONE -->
+            <!-- FOOTER COLUMN TWO -->
+            <div class="col-xs-12 col-sm-4 col-md-4 margin-top-20">
+                <div class="panel-transparent">
+                    <div class="footer-heading">Kategoriler</div>
+                    <div class="footer-body">
+                        <ul>
+                            <li>
+                                <a href="https://localhost:44367/Home/KnowledgeBase">Makaleler</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:44367/Home/Articles">Yazılar</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:44367/Home/SSS">Sıkça Sorulan Sorular</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- END FOOTER COLUMN TWO -->
+            <!-- FOOTER COLUMN THREE -->
+            <div class="col-xs-12 col-sm-4 col-md-4 margin-top-20">
+                <div class="panel-transparent">
+                    <div class="footer-heading">Hesap İşlemleri</div>
+                    <div class="footer-body">
+                        <ul>
+                            <li>
+                                <a href="https://localhost:44367/Home/Login">Giriş Sayfası</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:44367/Home/Login">Kayıt Ol</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- END FOOTER COLUMN THREE -->
+        </div>
+    </div>
+    <!-- END FOOTER -->
+    <!-- COPYRIGHT INFO -->
+    <div class="container-fluid footer-copyright marg30">
+        <div class="container">
+            <div class="pull-left">
+                Copyright © 2021 Ankara Büyükşehir Belediyesi
+            </div>
+            <div class="pull-right">
+                <i class="fa fa-facebook"></i> &nbsp;
+                <i class="fa fa-twitter"></i> &nbsp;
+                <i class="fa fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+    <!-- END COPYRIGHT INFO -->
+    <!-- LOADING MAIN JAVASCRIPT -->
+    <script src="/js/jquery-2.2.4.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src='https://cdn.rawgit.com/VPenkov/okayNav/master/app/js/jquery.okayNav.js'></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

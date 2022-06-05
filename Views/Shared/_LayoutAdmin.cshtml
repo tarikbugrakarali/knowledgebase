@@ -1,0 +1,135 @@
+﻿
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gomac Knowledgebase</title>
+    <!-- LOADING STYLESHEETS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/glow.css" rel="stylesheet">
+</head>
+<body>
+    <!-- LOGO -->
+    <div class="container" style="font-family:AnkaraSubHead-Bold;">
+        <div class="row">
+            <div class="header">
+                <div class="logo" align="center">
+                    <img src="/images/abb.jpg" height="74" width="50" alt="logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOGO-->
+    <div class="wrapper">
+        @*<div class="main-div main-div1">
+                <h1>Enjoy</h1>
+            </div>*@
+        <div class="main-div main-div2">
+            <h1>YÖNETİCİ SAYFASI</h1>
+        </div>
+        @*<div class="main-div main-div3">
+                <h1>Moment</h1>
+            </div>*@
+    </div>
+    <!-- TOP NAVIGATION -->
+    <div class="container-fluid" style="font-family: AnkaraDisplay-Heavy;">
+        <div class="navigation">
+            <div class="row">
+                <ul class="topnav">
+                    <li></li>
+                    <li>
+
+                        <a href="https://localhost:44367/Home">
+                            <i class="fa fa-home  "></i> Ana Sayfa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://localhost:44367/Home/KnowledgeBase">
+                            <i class="fa fa-archive "></i> Makaleler
+                        </a>
+                    </li>
+                    <li>
+
+                        <a href="https://localhost:44367/Home/Articles">
+                            <i class="fa fa-file-archive-o  "></i> Yazılar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://localhost:44367/Home/SSS">
+                            <i class="fa fa-question "></i> SSS
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END TOP NAVIGATION -->
+    <!-- SIDEBAR STUFF -->
+    <div class="col-md-4 padding-20" style="font-family:AnkaraSubHead-Bold;">
+
+
+        <div class="row margin-top-20">
+            <div class="col-md-12">
+                <div class="fb-heading-small">
+                    Kullanıcı Yetkileri
+                </div>
+                <hr class="style-three">
+                <div class="fat-content-small padding-left-10">
+                    <ul>
+                        <li>
+                            <a href="https://localhost:44367/Home/Users">
+                                <i class="fa fa-file-text-o"></i> Tüm Kullanıcılar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://localhost:44367/Home/MakeAdmin">
+                                <i class="fa fa-file-text-o"></i> Yetki İşlemleri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://localhost:44367/Home/FileUpload">
+                                <i class="fa fa-file-text-o"></i> Makale Yükle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://localhost:44367/Home/WriteArticle">
+                                <i class="fa fa-file-text-o"></i> Makale Oluştur
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://localhost:44367/Home/FAQMaker">
+                                <i class="fa fa-file-text-o"></i> SSS Oluştur
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+     </div> 
+       
+    <!-- END SIDEBAR STUFF -->
+
+    <div class="container" style="font-family:AnkaraSubHead-Bold;">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <!-- LOADING MAIN JAVASCRIPT -->
+    <script src="/js/jquery-2.2.4.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src='https://cdn.rawgit.com/VPenkov/okayNav/master/app/js/jquery.okayNav.js'></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

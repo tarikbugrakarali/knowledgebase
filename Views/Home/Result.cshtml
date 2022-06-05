@@ -1,0 +1,94 @@
+﻿@model ViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-8 padding-20">
+    <br />
+    <b> SONUÇLAR</b>
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col">Dosya Adı</th>
+                <th scope="col">Departman</th>
+                <th scope="col">Tag</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Article in Model.Articles)
+            {
+
+                <tr>
+                    <td>
+                        <a href="/uploads/@Article.FileName">
+                            @Article.FileName  
+                        </a>     
+                           </td>
+                    <td>@Article.Department  </td>
+                    <td> @Article.Tag    </td>
+
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col">Dosya Adı</th>
+                <th scope="col">Departman</th>
+                <th scope="col">Tag</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Text in Model.Texts)
+            {
+
+                <tr>
+                    <td>
+                        <a asp-action="ArticleDetail" asp-controller="Home" asp-route-id="@Text.Id" >@Text.Header</a>
+                        
+                    </td>
+                    <td>@Text.Department  </td>
+                    <td> @Text.Tag    </td>
+
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col">Dosya Adı</th>
+                <th scope="col">Departman</th>
+                <th scope="col">Tag</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Faq in Model.Faqs )
+            {
+
+                <tr>
+                    <td>@Faq.Question  </td>
+                    <td>@Faq.Department  </td>
+                    <td> @Faq.Answer    </td>
+
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div>
